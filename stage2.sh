@@ -1,0 +1,11 @@
+python train_stage2_vae.py \
+  --stage1_ckpt /root/output/out_stage1_fast/ckpt_ep008.pt \
+  --out_dir /root/output/out_stage2_vae_from_fast \
+  --epochs 20 \
+  --beta_max 0.3 \
+  --kl_warmup_epochs 20 \
+  --free_nats 2.0 \
+  --lambda_usage 1e-3 \
+  --lambda_sharp 5e-3 \
+  --batch_size 128 \
+  --amp

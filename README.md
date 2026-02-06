@@ -1,0 +1,11 @@
+/root/codes/inspect_one.py
+->
+/root/codes/expand_one_field.py
+->
+/root/codes/make_voxel_pick.py
+->
+/root/codes/inspect_small_dataset.py
+->
+/root/codes/train_membership_small.py
+->
+/root/codes/eval_split_half.py
