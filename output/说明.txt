@@ -1,0 +1,2 @@
+这里存放stage1和stage2的训练结果，
+包括各个epoch的pt、训练jsonl、以及最终成品的Z.npy和voxel_pick.npy。

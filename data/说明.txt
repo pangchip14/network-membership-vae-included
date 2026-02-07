@@ -1,0 +1,23 @@
+这里存放若干个时序数据文件：
+voxel_sub*.mat
+如voxel_sub4.mat
+
+每一个mat文件都包括一个voxel_result字段
+打开以后包括了12个不同的子字段（条件设定）：
+voxel_result.distancing_clear, 
+voxel_result.distancing_fuzzy, 
+voxel_result.distraction_clear, 
+voxel_result.distraction_fuzzy, 
+voxel_result.focus_clear, 
+voxel_result.focus_fuzzy, 
+voxel_result.inhibition_clear, 
+voxel_result.inhibition_fuzzy, 
+voxel_result.nature_clear, 
+voxel_result.nature_fuzzy, 
+voxel_result.close_clear, 
+voxel_result.close_fuzzy。
+
+每个子字段下，都是一个5D的fMRI数据：
+[91*109*91*35*4]
+前三个91 x 109 x 91 是 MNI标准脑空间（具体是MNI152模板）的经典分辨率
+后面35*4可能是时间+条件等。后续处理中，将其统一为35*4=140的广义时间维度信息。
