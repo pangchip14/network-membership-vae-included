@@ -21,27 +21,18 @@ def visualize_npy(file_path, max_display=100):
     if data.ndim == 2:
         print(f"数据范围: [{data.min():.4f}, {data.max():.4f}]")
         
-        fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-        
-        # 热力图
-        im1 = axes[0, 0].imshow(data, cmap='viridis')
-        axes[0, 0].set_title('colormap heatmap')
-        plt.colorbar(im1, ax=axes[0, 0])
-        
-        # 灰度图
-        axes[0, 1].imshow(data, cmap='gray')
-        axes[0, 1].set_title('grayscale heatmap')
+        fig = plt.figure(figsize=(12, 5))
         
         # 等高线
+        ax1 = fig.add_subplot(121)
         X, Y = np.meshgrid(range(data.shape[1]), range(data.shape[0]))
-        axes[1, 0].contourf(X, Y, data, 20, cmap='RdYlBu_r')
-        axes[1, 0].set_title('contour plot')
+        ax1.contourf(X, Y, data, 20, cmap='RdYlBu_r')
+        ax1.set_title('contour plot')
         
         # 3D图
-        from mpl_toolkits.mplot3d import Axes3D
-        ax3d = fig.add_subplot(224, projection='3d')
-        ax3d.plot_surface(X, Y, data, cmap='coolwarm', alpha=0.8)
-        ax3d.set_title('3D curve surface figure')
+        ax2 = fig.add_subplot(122, projection='3d')
+        ax2.plot_surface(X, Y, data, cmap='coolwarm', alpha=0.8)
+        ax2.set_title('3D curve surface figure')
         
         plt.tight_layout()
         plt.savefig('visualization_2d.png')
@@ -73,6 +64,6 @@ def visualize_npy(file_path, max_display=100):
         plt.close()
 
 # 使用示例
-visualize_npy('/root/output/out_stage2_vae_from_fast/export_ep006/Z.npy')
+visualize_npy('/output/out_stage2_vae_from_fast/Z.npy')
 
 

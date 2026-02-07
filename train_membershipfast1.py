@@ -18,7 +18,7 @@ FAST Stage-1 Membership Differentiation (Deterministic)
 
 依赖：
 - voxel_pick.npy (50000,)
-- /root/autodl-tmp/time_series/voxel_sub*.mat 里含 voxel_result[field]
+- /data/voxel_sub*.mat 里含 voxel_result[field]
 
 输出：
 - out_dir/stage1_fast_log.jsonl
@@ -185,7 +185,7 @@ def make_optimizer(model, lr_enc, lr_Z):
 # -----------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out_dir", type=str, default="/root/output/out_stage1_fast")
+    ap.add_argument("--out_dir", type=str, default="/output/out_stage1_fast")
     ap.add_argument("--K", type=int, default=14)
     ap.add_argument("--V_target", type=int, default=50000)
     ap.add_argument("--n_subjects", type=int, default=12)
@@ -221,9 +221,9 @@ def main():
     assert pick.size == args.V_target, f"voxel_pick has V={pick.size}, expected {args.V_target}"
     V = int(pick.size)
 
-    files = glob.glob("/root/autodl-tmp/time_series/voxel_sub*.mat")
+    files = glob.glob("/data/voxel_sub*.mat")
     if len(files) == 0:
-        raise FileNotFoundError("No voxel_sub*.mat found under /root/autodl-tmp/time_series/")
+        raise FileNotFoundError("No voxel_sub*.mat found under /data")
     subs = pick_subjects(files, n=args.n_subjects)
     pairs = [(fp, f) for fp in subs for f in FIELDS]
 

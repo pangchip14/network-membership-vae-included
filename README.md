@@ -22,6 +22,31 @@
 
 # 项目结构
 
+.
+├── data
+│   └── 说明.txt
+├── environment.yml
+├── eval_split_half.py
+├── expand_one_field.py
+├── export_Z_from_ckpt.py
+├── export.sh
+├── inspect_one.py
+├── inspect_small_dataset.py
+├── learn.md
+├── make_voxel_pick.py
+├── output
+│   ├── out_stage1_fast
+│   ├── out_stage2_vae_from_fast
+│   └── 说明.txt
+├── README.md
+├── stage2.sh
+├── test.py
+├── train_membershipfast1.py
+├── train_stage2_vae.py
+├── visualization_2d.png
+├── visualization_col_barh.png
+└── visualize_npy.py
+MacBook-Air:network-membership-vae-included Zhuanz$ 
 
 
 
