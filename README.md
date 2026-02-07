@@ -22,6 +22,7 @@
 
 # 项目结构
 
+```
 .
 ├── data
 │   └── 说明.txt
@@ -46,20 +47,26 @@
 ├── visualization_2d.png
 ├── visualization_col_barh.png
 └── visualize_npy.py
-MacBook-Air:network-membership-vae-included Zhuanz$ 
+```
 
 
+# 使用顺序
 
 
-
-/root/codes/inspect_one.py
+```
+inspect_one.py
 ->
-/root/codes/expand_one_field.py
+expand_one_field.py
 ->
-/root/codes/make_voxel_pick.py
+make_voxel_pick.py
 ->
-/root/codes/inspect_small_dataset.py
+inspect_small_dataset.py
 ->
-/root/codes/train_membership_small.py
+train_membershipfast1.py
 ->
-/root/codes/eval_split_half.py
+train_stage2_vae.py
+->
+visualize_npy.py
+->
+eval_split_half.py
+```
