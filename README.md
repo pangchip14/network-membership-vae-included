@@ -90,6 +90,6 @@ bash export.sh
 ```
 
 ```
-# 8 分析结果可视化：
+# 9 分析结果可视化：
 python visualize_npy.py
 ```
