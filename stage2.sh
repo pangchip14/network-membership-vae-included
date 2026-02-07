@@ -1,6 +1,6 @@
 python train_stage2_vae.py \
-  --stage1_ckpt /root/output/out_stage1_fast/ckpt_ep008.pt \
-  --out_dir /root/output/out_stage2_vae_from_fast \
+  --stage1_ckpt /output/out_stage1_fast/ckpt_ep008.pt \
+  --out_dir output/out_stage2_vae_from_fast \
   --epochs 20 \
   --beta_max 0.3 \
   --kl_warmup_epochs 20 \

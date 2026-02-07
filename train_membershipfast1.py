@@ -14,16 +14,16 @@ FAST Stage-1 Membership Differentiation (Deterministic)
 4) 使用率防塌缩：usage_kl（弱）
 
 运行：
-    python train_stage1_fast.py --amp
+    python train_membershipfast1.py --amp
 
 依赖：
 - voxel_pick.npy (50000,)
 - /data/voxel_sub*.mat 里含 voxel_result[field]
 
 输出：
-- out_dir/stage1_fast_log.jsonl
-- out_dir/Z_stage1_fast.npy
-- out_dir/ckpt_epXXX.pt
+- output/stage1_fast_log.jsonl
+- output/Z_stage1_fast.npy
+- output/ckpt_epXXX.pt
 """
 
 import os, glob, re, json, argparse

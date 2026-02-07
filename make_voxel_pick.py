@@ -26,7 +26,7 @@ def load_field(mat_path, field):
     x = x.reshape(-1, x.shape[3]*x.shape[4])  # (V,140)
     return x                                  # V x 140
 
-files = sorted(glob.glob("/root/autodl-tmp/time_series/voxel_sub*.mat"), key=nat_key)
+files = sorted(glob.glob("data/voxel_sub*.mat"), key=nat_key)
 assert files, "No voxel_sub*.mat found"
 files = files[:MASK_SUBS]
 print("Mask files:", [os.path.basename(x) for x in files])

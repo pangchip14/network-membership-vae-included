@@ -2,7 +2,7 @@
 import h5py
 import numpy as np
 
-mat_path = "/root/autodl-tmp/time_series/voxel_sub4.mat"   # 换成目录里任意一个
+mat_path = "data/voxel_sub4.mat"   # 换成目录里任意一个
 
 with h5py.File(mat_path, "r") as f:
     print("Top-level keys:", list(f.keys()))

@@ -6,7 +6,7 @@ import numpy as np
 最终维度：(V, T)=(91*109*91, 140)= (902629, 140)
 '''
 
-mat_path = "/root/autodl-tmp/time_series/voxel_sub4.mat"
+mat_path = "/data/voxel_sub4.mat"
 field = "focus_clear"
 
 with h5py.File(mat_path, "r") as f:

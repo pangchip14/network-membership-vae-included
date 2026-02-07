@@ -1,4 +1,4 @@
-name: vae_mat
+name: vae_membership_compute
 channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/

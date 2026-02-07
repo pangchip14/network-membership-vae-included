@@ -125,8 +125,8 @@ def metrics(Z1, Z2):
     return mean_cos, top1_agree, top3_hit
 
 def main(n_pairs=6):
-    pick = np.load("/root/output/out_membership_small_lr3e-4_test2-tau-sharp0/voxel_pick.npy")
-    files = sorted(glob.glob("/root/autodl-tmp/time_series/voxel_sub*.mat"), key=nat_key)
+    pick = np.load("/output/out_stage2_vae_from_fast/voxel_pick.npy")
+    files = sorted(glob.glob("/data/voxel_sub*.mat"), key=nat_key)
 
     rng = np.random.default_rng(0)
     chosen_files = rng.choice(files, size=min(6, len(files)), replace=False)
